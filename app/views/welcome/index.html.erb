@@ -1,0 +1,43 @@
+<%=image_tag("spacecat.jpg")%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.2/dist/leaflet.css"
+   integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+   crossorigin=""/>
+
+<script src="https://unpkg.com/leaflet@1.3.2/dist/leaflet.js"
+   integrity="sha512-2fA79E27MOeBgLjmBrtAgM/20clVSV8vJERaW/EcnnWCVGwQRazzKtQS1kIusCZv1PtaQxosDZZ0F1Oastl55w=="
+   crossorigin="">
+</script>
+
+<div style="height: 180px;" id="mapid"></div>
+
+<script>
+function moveISS () {
+    $.getJSON('http://api.open-notify.org/iss-now.json?callback=?', function(data) {
+        var lat = data['iss_position']['latitude'];
+        var lon = data['iss_position']['longitude'];
+          
+        // See leaflet docs for setting up icons and map layers
+        // The update to the map is done here:
+        
+        iss.setLatLng([lat, lon]);
+        isscirc.setLatLng([lat, lon]);
+        map.panTo([lat, lon], animate=true);
+    });
+    setTimeout(moveISS, 5000); 
+}
+moveISS()
+</script>
+ -->

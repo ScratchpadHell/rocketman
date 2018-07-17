@@ -1,0 +1,16 @@
+<h1> <%= @user.name %> </h1>
+
+<p> Email: <%= @user.email %> </p>
+
+<a href="/users/<%= @user.id %>"> Edit user </a>
+
+<form method="POST" action="/users/<%=@user.id %>">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete"/>
+</form>
+
+<a href="/"> Back </a>
+
+<button type="button">Where is the Space Station?</button>
+
+<div><%= @user.get_iss["iss_position"] %> </div>
