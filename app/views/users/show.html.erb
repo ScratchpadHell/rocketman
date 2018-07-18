@@ -2,15 +2,18 @@
 
 <p> Email: <%= @user.email %> </p>
 
-<a href="/users/<%= @user.id %>"> Edit user </a>
+<p><%= link_to 'Edit', edit_user_path(@user) %></p>
+<p><%= link_to 'Back', users_path %></p>
 
 <form method="POST" action="/users/<%=@user.id %>">
   <input type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete"/>
 </form>
 
-<a href="/"> Back </a>
+<p></p>
 
-<button type="button">Where is the Space Station?</button>
+<p>Your current location is: <%= @user.get_user_loc %></p>
 
-<div><%= @user.get_iss["iss_position"] %> </div>
+<button onclick="location.href='http://api.open-notify.org/iss-now.json'" type="button">Where is the Space Station?</button>
+
+<p><%= @user.get_iss["iss_position"] %> </p>

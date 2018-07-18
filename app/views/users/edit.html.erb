@@ -8,10 +8,12 @@
 
   <div>
     <label for="email">Email</label>
-    <input type="text" id="email" name="email"><%= @user.email %></input>
+    <input type="text" id="email" name="email" value="<%= @user.email %>" />
   </div>
 
   <div>
     <input type="submit" value="Update!" />
   </div>
 </form>
+
+<%= link_to 'Back', @user %>
